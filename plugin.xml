@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="am.dev.cordova.plugins.simpleaudio"
+        version="0.1">
+
+    <name>Simple Audio</name>
+    <description>Adds ability to play sound effects without stopping background audio.</description>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <js-module src="www/simpleaudio.js" name="SimpleAudio">
+        <clobbers target="cordova.plugins.simpleaudio"/>
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SimpleAudio">
+                <param name="ios-package" value="AMSimpleAudio" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/AMSimpleAudio.h" />
+        <source-file src="src/ios/AMSimpleAudio.m" />
+    </platform>
+
+</plugin>

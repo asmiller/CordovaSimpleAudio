@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "name": "am.dev.cordova.plugins.simpleaudio",
+  "cordova_name": "Simple Audio",
+  "description": "Adds ability to play sound effects without stopping background audio.",
+  "license": "MIT",
+  "platforms": [
+    "ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ]
+}
